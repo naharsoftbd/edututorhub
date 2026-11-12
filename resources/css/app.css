@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #f8fafc;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hover-lift {
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+}
+
+.swiper-button-custom {
+    background: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4f46e5;
+    transition: all 0.2s;
+    z-index: 20;
+}
+
+.swiper-button-custom:hover {
+    background: #4f46e5;
+    color: white;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .swiper-button-custom {
+        display: none !important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: #4f46e5 !important;
+}
+
+.footer-link {
+    transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #a5b4fc;
+    transform: translateX(4px);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* JOb Board specific styles */
+
+.job-card {
+    transition: all 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+    border-color: #c7d2fe;
+}
+
+.job-card {
+    transition: all 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+    border-color: #c7d2fe;
+}
+
+.filter-sidebar {
+    scrollbar-width: thin;
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #e2e8f0;
+    outline: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4f46e5;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Sidebar transition */
+.sidebar-transition {
+    transition: all 0.3s ease;
+}
+
+/* Active nav item indicator */
+.nav-active {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.1) 0%, transparent 100%);
+}
+
+.nav-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: #6366f1;
+    border-radius: 0 3px 3px 0;
+}
